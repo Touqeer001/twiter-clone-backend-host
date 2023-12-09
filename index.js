@@ -1,19 +1,3 @@
-// import express from "express";
-// import cors from "cors";
-// import bodyParser from "body-parser";
-// import Connection from "./databse/db.js";
-
-// const app = express();
-// app.use(cors());
-
-// const PORT = 8000;
-
-// app.use(bodyParser.json({ extended: true })); //ye karne se payload me body show hone lagi gi..
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// Connection();
-
-// app.listen(PORT, () => console.log(`SErver is Runnning on ${PORT}`));
 
 const express = require("express");
 const cors = require("cors");
@@ -24,7 +8,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://touqeer:Ansari@cluster0.yimeney.mongodb.net/?retryWrites=true&w=majority`;
+ const uri = `mongodb+srv://touqeer:Ansari@cluster0.yimeney.mongodb.net/?retryWrites=true&w=majority`;
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
